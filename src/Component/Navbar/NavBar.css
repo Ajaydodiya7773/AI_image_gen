@@ -1,0 +1,180 @@
+/* Basic Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Navigation */
+.nav {
+  border-radius: 12px;
+  background: #ffffff1a;
+  border: 1px solid #ffffff20;
+  backdrop-filter: blur(16px) saturate(120%);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  font-size: 2.0rem;
+  color: #fff; /* white */
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin: 0 1rem;
+}
+
+.nav-item a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: var(--highlight-color); /* Highlight color on hover */
+}
+
+.nav-item button {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #DE1B89;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-item button:hover {
+  background-color: #DE1B89;
+  color: #fff;
+}
+
+/* User Profile */
+.nav-profile {
+  display: flex;
+  align-items: center;
+}
+
+.nav-profile-pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.nav-profile-initial {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-profile-name {
+  color: #fff;
+  margin-right: 10px;
+}
+
+/* Menu Icon */
+.nav-menu-icon {
+  display: none; /* Initially hidden for larger screens */
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-menu-icon:hover {
+  color: var(--highlight-color); /* Highlight color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: none; /* Initially hidden for mobile */
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.9); /* semi-transparent black */
+    padding: 1rem 0;
+    text-align: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Transition for smoother visibility */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Hide the element initially */
+  }
+
+  .nav-links.active {
+    display: flex;
+    opacity: 1; /* Show when active */
+    visibility: visible; /* Ensure the element is visible */
+  }
+
+  .nav-item {
+    margin: 1rem 0;
+  }
+
+  .nav-menu-icon {
+    display: block;
+  }
+
+  .nav-profile-pic,
+  .nav-profile-initial {
+    width: 25px;
+    height: 25px;
+  }
+
+  .nav-profile-name {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-profile-pic,
+  .nav-profile-initial {
+    width: 20px;
+    height: 20px;
+  }
+
+  .nav-profile-name {
+    font-size: 0.8rem;
+    margin-top: 4px;
+  }
+}

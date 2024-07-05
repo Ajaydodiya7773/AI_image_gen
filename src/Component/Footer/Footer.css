@@ -1,0 +1,38 @@
+.footer {
+  border-radius: 12px;
+ background:#ffffff1a;
+ border: 1px solid #ffffff20;
+ backdrop-filter: blur(1px) saturate(100%);
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer p {
+  margin: 0;
+  color: #6c757d;
+}
+
+.footer-nav {
+  margin: 20px 0;
+}
+
+.footer-link {
+  margin: 0 10px;
+  color: #f6f8fa;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.social-media .footer-link {
+  margin: 0 5px;
+}
