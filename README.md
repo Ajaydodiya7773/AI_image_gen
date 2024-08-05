@@ -1,8 +1,11 @@
 # Getting Started with Create React App
 Hello Am Ajay Dodiya Web Developer.
 @Ajaydodiya7773
-Email-Ajaysinghdodiya29@gmail.com
+ajaysinghdodiya29@gmail.com
 This is my AI Project Based On AI Image To Text Generator.
+Using Hugging Face Sdlx flash model API.
+API BASED PROJECT
+(MORE Features are Uploaded soon Work in process.)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
